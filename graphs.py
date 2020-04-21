@@ -44,8 +44,9 @@ def graph():
 
 def scatterplot(x,y):
     return plt.scatter(x,y)
+
 def scatter():
-    pass
+    return 'This is a scatter plot'
 
 def eddieplot(df):
     df.plotting.scattermatrix()
@@ -69,9 +70,6 @@ x=list(range(10))
 fig, ax = plt.subplots()
 ax.plot(x,x)
 
-def choropleth():
-    return 0
-
 
 def bootstrap_sample_medians(data, n_bootstrap_samples=10000):
     bootstrap_sample_medians = []
@@ -85,6 +83,9 @@ def choropleth():
     # import plotly.express as px
     # import json
     # from urllib.request import urlopen
+
+    # see https://github.com/tylerjwoods/covid-19/blob/master/choropleth_states.ipynb
+    # for implementation
 
     with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
     counties = json.load(response)
@@ -103,7 +104,12 @@ def choropleth():
     fig.show()
     return 0
 
-
+def residual_plot(ax, x, y, y_hat, n_bins=50):
+    residuals = y - y_hat
+    ax.axhline(0, color="black", linestyle="--")
+    ax.scatter(x, residuals, color="grey", alpha=0.5)
+    ax.set_ylabel("Residuals ($y - \hat y$)")
+                   
 
 #HI GUYS!!
 
