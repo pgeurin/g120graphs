@@ -1,7 +1,7 @@
 #! python3
 import numpy as np
 import pandas as pd
-
+import math
 
 def shaded_alpha_area(p,n, alpha):
     binomial_mean = p * n
@@ -40,7 +40,8 @@ def twin_x():
 def graph():
     return 
 
-
+def holy_guacamole():
+    return math.pi
 
 def scatterplot(x,y):
     return plt.scatter(x,y)
