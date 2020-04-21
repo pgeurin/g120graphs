@@ -22,8 +22,8 @@ def graph():
     return 
 
 <<<<<<< HEAD
-def scatterplot(x,y):
-    return plt.scatter(x,y)
+def scatterplot(x,y,z):
+    return plt.scatter(x,y)z
 =======
 def scatter():
     pass
