@@ -26,9 +26,9 @@ def ring_graph(size=[1, 2, 3], labels=["A", "B", "C"], title="title", figsize=(8
     colors = colors
 
     # Create a circle to obscure the center of the pie chart, making it a ring graph:
-    my_circle = plt.Circle( (0,0), 0.7, color='white')
+    circle = plt.Circle( (0,0), 0.7, color='white')
 
     ax.pie(size, labels=labels, colors=colors)
     ax.set_title(title)
     p = plt.gcf()
-    p.gca().add_artist(my_circle)
+    p.gca().add_artist(circle)
