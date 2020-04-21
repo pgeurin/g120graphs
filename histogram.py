@@ -11,9 +11,6 @@ import mplcyberpunk
 import seaborn as sns
 
 
-
-
-
 # Cyberpunk Histogram with KDE
 
 """
