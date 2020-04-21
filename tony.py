@@ -8,14 +8,12 @@ import matplotlib.pyplot as plt
 def ring_graph(size=[1, 2, 3], labels=["A", "B", "C"], title="title", figsize=(8,8), colors=["R", "G", "B"]):
     """
     Really simple ring graph.
-
     INPUT:
     - size: list of ints; size of the ring sections (relative)
     - labels: list of str; labels of ring sections
     - title: str; name of your ring graph
     - figsize: tuple of ints; xy-size of the graph
     - colors: list of str; list of the colors of your segments
-
     OUTPUT:
     Should be a ring graph!
     """
