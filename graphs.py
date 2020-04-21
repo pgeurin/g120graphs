@@ -44,8 +44,9 @@ def graph():
 
 def scatterplot(x,y):
     return plt.scatter(x,y)
+
 def scatter():
-    pass
+    return 'This is a scatter plot'
 
 def eddieplot(df):
     df.plotting.scattermatrix()
