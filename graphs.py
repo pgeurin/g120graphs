@@ -22,9 +22,16 @@ def graph():
     return 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 def scatterplot(x,y,z):
     return plt.scatter(x,y)z
 =======
+=======
+
+
+def scatterplot(x,y):
+    return plt.scatter(x,y)
+>>>>>>> 47f328fb08d5de6e8c38c8bca67302b12e23b789
 def scatter():
     pass
 
@@ -53,6 +60,7 @@ ax.plot(x,x)
 def choropleth():
     return 0
 
+
 def bootstrap_sample_medians(data, n_bootstrap_samples=10000):
     bootstrap_sample_medians = []
     for i in range(n_bootstrap_samples):
@@ -62,4 +70,8 @@ def bootstrap_sample_medians(data, n_bootstrap_samples=10000):
 
 def choropleth():
     return 0
+<<<<<<< HEAD
 >>>>>>> 475c4d5f05f31691ccea6580b2763d9308dbf1a3
+=======
+
+>>>>>>> 47f328fb08d5de6e8c38c8bca67302b12e23b789
