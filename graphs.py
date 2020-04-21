@@ -103,7 +103,12 @@ def choropleth():
     fig.show()
     return 0
 
-
+def residual_plot(ax, x, y, y_hat, n_bins=50):
+    residuals = y - y_hat
+    ax.axhline(0, color="black", linestyle="--")
+    ax.scatter(x, residuals, color="grey", alpha=0.5)
+    ax.set_ylabel("Residuals ($y - \hat y$)")
+                   
 
 #HI GUYS!!
 
