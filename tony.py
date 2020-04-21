@@ -1,4 +1,13 @@
 # There is no graph, only Zuul.
+# Kneel before Zod?
+
+
+#makin some changes to do some stuff with git
+#will this work?
+
+# Behold it is I.  
+
+
 
 # Just kidding, here's a simple ring graph because pie charts are evil, but rings...aren't?
 import numpy as np
