@@ -1,7 +1,7 @@
 #! python3
 import numpy as np
 import pandas as pd
-
+import math
 
 def shaded_alpha_area(p,n, alpha):
     binomial_mean = p * n
@@ -40,12 +40,14 @@ def twin_x():
 def graph():
     return 
 
-
+def holy_guacamole():
+    return math.pi
 
 def scatterplot(x,y):
     return plt.scatter(x,y)
+
 def scatter():
-    pass
+    return 'This is a scatter plot'
 
 def eddieplot(df):
     df.plotting.scattermatrix()
@@ -69,9 +71,6 @@ x=list(range(10))
 fig, ax = plt.subplots()
 ax.plot(x,x)
 
-def choropleth():
-    return 0
-
 
 def bootstrap_sample_medians(data, n_bootstrap_samples=10000):
     bootstrap_sample_medians = []
@@ -85,6 +84,9 @@ def choropleth():
     # import plotly.express as px
     # import json
     # from urllib.request import urlopen
+
+    # see https://github.com/tylerjwoods/covid-19/blob/master/choropleth_states.ipynb
+    # for implementation
 
     with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
     counties = json.load(response)
@@ -104,9 +106,18 @@ def choropleth():
     return 0
 
 
+
 alphas = np.logspace(min_alpha_exp, max_alpha_exp, nalphas)
 coefs = np.zeros((nalphas, nfeatures))
 columns = df.columns
+
+def residual_plot(ax, x, y, y_hat, n_bins=50):
+    residuals = y - y_hat
+    ax.axhline(0, color="black", linestyle="--")
+    ax.scatter(x, residuals, color="grey", alpha=0.5)
+    ax.set_ylabel("Residuals ($y - \hat y$)")
+                   
+
 
 def Lasso_regression_alphas(df, alphas, coefs, nfeatures=5, min_alpha_exp = 0, max_alpha_exp = 10**5, nalphas = 20):
     fig, ax = plt.subplots(figsize=(10,5))
