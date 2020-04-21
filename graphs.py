@@ -105,6 +105,12 @@ def choropleth():
     fig.show()
     return 0
 
+
+
+alphas = np.logspace(min_alpha_exp, max_alpha_exp, nalphas)
+coefs = np.zeros((nalphas, nfeatures))
+columns = df.columns
+
 def residual_plot(ax, x, y, y_hat, n_bins=50):
     residuals = y - y_hat
     ax.axhline(0, color="black", linestyle="--")
@@ -112,5 +118,20 @@ def residual_plot(ax, x, y, y_hat, n_bins=50):
     ax.set_ylabel("Residuals ($y - \hat y$)")
                    
 
+
+def Lasso_regression_alphas(df, alphas, coefs, nfeatures=5, min_alpha_exp = 0, max_alpha_exp = 10**5, nalphas = 20):
+    fig, ax = plt.subplots(figsize=(10,5))
+    for feature, color in zip(range(nfeatures), ['r','g','b','c','m','k']):
+        plt.plot(alphas, coefs[:, feature],
+             color=color,
+             label="$\\beta_{{{}}}$".format(columns[feature]))
+
+    ax.set_xscale('log')
+    ax.set_title("$\\beta$ as a function of $\\alpha$ for Ridge regression")
+    ax.set_xlabel("$\\alpha$")
+    ax.set_ylabel("$\\beta$")
+    ax.legend(loc="upper right")
+                   
+                   
 #HI GUYS!!
 
